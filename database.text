@@ -1,0 +1,6 @@
+board 
+idx int 11 auto_increment
+id varchar 20
+title varchar 50
+content longtext current_timestamp
+regdate timestamp

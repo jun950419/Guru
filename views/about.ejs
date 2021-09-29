@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>GURU</title>
+  <link rel='stylesheet' href='/stylesheets/about.css' />
+</head>
+
+<body>
+  <nav class="header_bar">
+    <div class="header_logo">
+      <a href='/index'><img src="/images/GURU_logo.png"></a>
+    </div>
+
+    <ul class="header_menu">
+      <li><a href="/about">소개</a></li>
+      <li><a href="/gurulist">GURU</a></li>
+      <li><a href="/institutions">투자기관</a></li>
+      <li><a href="/boardlist/1">게시판</a></li>
+    </ul>
+
+    <%if (logined){%>
+      <ul class="loged">
+        <li><%=logined%></li>
+        <li><a href="/enterpw">정보수정</a></li>
+        <li><a href="/logout">로그아웃</a></li>
+      </ul>
+        
+    <%} else { %>
+      <ul class="sign">
+        <li><a href='/login'>로그인</a></li>
+        <li><a href='/register'>회원가입</a></li>
+      </ul>
+    <%}%>
+  </nav>
+  
+    <div class="board">
+      <h1>사이트 소개</h1>
+      
+            <p class="text">
+
+            <strong>GURU란? </strong> <br><hr>
+
+            힌두교,불교 등의 기타 종교에서 쓰는 단어로, 
+            “자아를 터득한 신성한 교육자,스승”으로 일컫는 자를 지칭합니다.<br>
+
+            금융계예서 워렌 버핏, 조지 소로스, 레이 달리오 등 세계적으로 
+            뛰어난 투자자로서 “GURU”라고 부르는 이들이 있습니다. <br>
+            말 한마디에 금융시장에 영향을 주고, 개인 투자자들과 거대 기관 투자가들에게 인사이트를 제공하는 사람들입니다.<br>
+            <br>
+            <strong>기획의도</strong><br><hr>
+            최근 코로나 펜데믹 이후 주식시장에 대한 관심이 폭팔적으로 증가하며 국내주식 뿐만 아니라 해외주식에 <br>대한 관심 또한 높아졌습니다.
+
+            하지만 미국에서 당연시 여겨지는 분산투자, 포트폴리오가<br>  국내 개인투자자들에게는 무지한 현 상황입니다.
+
+            그래서, 앞으로도 더욱 늘어날 투자자들을 가망 타겟으로 하여, <br>
+            사용자들간의 소통을 할 수 있는 게시판을 추가하여 작은 커뮤니티의 공간을 제공하고,<br>
+            거대 투자은행과 금융 구루들의 포트폴리오를 주기적으로 업데이트하여 국내 개인들에게 쉽게 전달하고자 기획했습니다.<br>
+            </p>
+    </div>
+</body>
+</html>

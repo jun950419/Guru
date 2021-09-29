@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>GURU</title>
+  <link rel='stylesheet' href='/stylesheets/institions.css' />
+</head>
+
+<body>
+  <nav class="header_bar">
+    <div class="header_logo">
+      <a href='/index'><img src="/images/GURU_logo.png"></a>
+    </div>
+
+    <ul class="header_menu">
+      <li><a href="/about">소개</a></li>
+      <li><a href="/gurulist">GURU</a></li>
+      <li><a href="/institutions">투자기관</a></li>
+      <li><a href="/boardlist/1">게시판</a></li>
+    </ul>
+
+    <%if (logined){%>
+      <ul class="loged">
+        <li><%=logined%></li>
+        <li><a href="/enterpw">정보수정</a></li>
+        <li><a href="/logout">로그아웃</a></li>
+      </ul>
+        
+    <%} else { %>
+      <ul class="sign">
+        <li><a href='/login'>로그인</a></li>
+        <li><a href='/register'>회원가입</a></li>
+      </ul>
+    <%}%>
+  </nav>
+      <div class="board">
+        <div class="photo"><img src="/images/GG.jpg"></div>
+        <div class="about">
+          <h1>George Soros</h1> 
+          <h5>20세기 최고의 펀드매니저<br>
+          Soros Fund Management 회장, Open Society Foundation 회장</h5>
+        </div>
+        <table class="list-table">
+            <thead>
+                <tr>
+
+                      <th width="500">회사명</th>
+                      <th width="150">상장코드</th>
+                      <th width="230">2020-12-31 총 자산<small>($)</small></th>
+                      <th width="150">주식 수</th>
+                      <th width="160">포트폴리오%</th>
+                  </tr>
+              </thead>
+              
+            <tbody>
+              <tr>
+                <% for(let i=0; i<20; i++){for(let x=0;x<5;x++){%>
+                   
+                <td>
+                    <ul>
+                        <li class="tl"><%=arra[x][i]%></li>
+                        
+                    </ul>
+                    
+                </td>
+                
+            
+            <%}%>
+        </tr>
+        <%}%>
+            </tbody>
+        
+          </table>
+        </div>
+         
+</body>
+
+</html>

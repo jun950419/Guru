@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+<title>회원가입</title>
+<link rel="stylesheet" href='/stylesheets/register.css' />
+<script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="/project/lib/jquery-3.6.0.min.js"></script>
+</head>
+
+    <body>
+        <div id="wrap">
+            <div id="header" role="banner">
+                
+                <a href='/index'><img src="/images/GURU_logo.png"></a>
+            </div>
+
+            <!-- header -->
+            <!-- container -->
+            <div id="container" role="main">
+                <div id="content">
+                    
+                    <h2 class="blind">GURU 회원가입</h2>
+                    <div class="jonin_form">
+                        <form action="" id="joing_form" method="POST" name="register">
+                            <input type="hidden" id="token_sjoin" name="token_sjoin" value="">
+                            <input type="hidden" id="langSelect"  name="langSelect" value="ko_KR">
+                                <!-- 약관 -->
+                            <div class="terms_p">
+                                <ul class="terms_bx_list">
+                                    <li class="terms_bx">
+                                        <span input_chk>
+                                            <input type="checkbox" id="termsService1" name="termsServive" class="chk" required>
+                                            
+                                                
+                                                "GURU 이용약관 동의"
+                                                <span class="terms_necessary">(필수)</span>
+                                            
+                                        </span>
+                                        <div class="terms_box" tabindex="0" id="divService">
+                                            <div class="article">
+                                                <h3 class="article_title">여러분을 환영합니다.</h3>
+                                                <p class="article_text">
+                                                    "GURU 서비스 및 제품(이하 '서비스')을 이용해 주셔서 감사합니다.
+                                                    본 약관은 다양한 GURU 서비스의 이용과 관련하여 회원과 비회원의 관계를
+                                                    설명하며, 아울러 여러분의 GURU 이용에 도움이 될 수 있는 유익한 정보를 포함하고 있습니다."
+                                                </p>
+                                                <p class="article_text">
+                                                    "GURU 서비스를 이용하시거나 서비스 회원으로 가입하실 경우 여러분은 본 약관 및
+                                                    관련 운영 정책을 확인하거나 동의하게 되므로, 시간내이서 주의깊게 살펴봐주시기 바랍니다."
+                                                </p>
+                                            </div>
+                                            <div class="article">
+                                                <h3 class="article_title">다양한 GURU 서비스를 즐겨보세요.</h3>
+                                                <p class="article_text">
+                                                    "GURU 는 <a href="http://guru.cafe24app.com/">http://guru.cafe24app.com/</a>을 비롯한
+                                                    GURU 도메인의 웹사이트 및 정보검색, 다른 이용자들과의 커뮤니케이션, 콘텐츠 제공, 정보 제공 등
+                                                    여러분의 생활에 편리함을 더할 수 있는 다양한 서비스를 제공하고 있습니다."
+                                                </p>
+                                            </div>   
+                                        </div>
+                                    </li>
+                                    <li class="terms_bx">
+                                        <span input_chk>
+                                            <input type="checkbox" id="termsService2" name="termsServive" class="chk" required>
+                                            
+                                                
+                                                "개인정보 수정 및 이용 동의"
+                                                <span class="terms_necessary">(필수)</span>
+                                            
+                                        </span>
+                                        <div class="terms_box" tabindex="0" id="divPrivacy">
+                                            <div class="policy_summary">
+                                                <p class="policy_summary_text">
+                                                    "개인정보보호법에 따라 'GURU'에 회원가입 신청하시는 분께 수집하는
+                                                    개인정보의 항목, 개인정보의 수집 및 이용목적, 개인정보의 보유 및 이용기간,
+                                                    동의 거부권 및 동의 거부시 불이익에 관한 사항을 안내드리오니 자세히
+                                                    읽은 후 동의하여 주시기 바랍니다."
+                                                </p>
+                                            </div>
+                                            <div class="article">
+                                                <h3 class="article_title">수집하는 개인정보</h3>
+                                                <p class="article_text">
+                                                    이용자는 회원가입을 하지 않아도 정보 검색, 뉴스 보기 등 대부분의 
+                                                    네이버 서비스를 회원과 동일하게 이용할 수 있습니다. 이용자가 메일, 캘린더, 
+                                                    카페, 블로그 등과 같이 개인화 혹은 회원제 서비스를 이용하기 위해 회원가입을 
+                                                    할 경우, 네이버는 서비스 이용을 위해 필요한 최소한의 개인정보를 수집합니다.
+                                                </p>
+                                                <div class="clause">
+                                                    <h4 class="clause_title">회원가입 시점에 GURU가 이용자로부터
+                                                        수집하는 개인정보는 아래와 같습니다.
+                                                    </h4>
+                                                    <ul class="sections">
+                                                        <li class="sections_section">
+                                                            
+                                                                회원 가입 시에 ‘아이디, 비밀번호, 이름, 생년월일, 성별, 휴대전화번호’를
+                                                                 필수항목으로 수집합니다.
+                                                                만약 이용자가 입력하는 생년월일이 만14세 미만 아동일 경우에는 법정대리인 정보(법정대리인의 이름, 생년월일, 성별, 
+                                                                중복가입확인정보(DI), 휴대전화번호)를 추가로 수집합니다.
+                                                                그리고 선택항목으로 이메일 주소, 프로필 정보를 수집합니다.
+                                                        </li>
+                                                        <li class="sections_section">
+                                                            
+                                                                단체아이디로 회원가입 시 단체아이디, 비밀번호, 단체이름, 
+                                                                이메일주소, 휴대전화번호를 필수항목으로 수집합니다. 
+                                                                그리고 단체 대표자명을 선택항목으로 수집합니다.
+                                                        </li>
+                                                    </ul>
+                                                    <h4 class="clause_title">서비스 이용 과정에서 이용자로부터 수집하는
+                                                        개인정보는 아래와 같습니다.
+                                                    </h4>
+                                                    <p class="clause_text">
+                                                        GURU 내의 개별 서비스 이용, 이벤트 응모 및 경품 신청 과정에서 해당 서비스의 이용자에 한해 추가 개인정보 수집이 발생할 수 있습니다. 
+                                                        추가로 개인정보를 수집할 경우에는 해당 개인정보 수집 시점에서 이용자에게 ‘수집하는 개인정보 항목, 개인정보의 수집 및 이용목적, 
+                                                         보관기간’에 대해 안내 드리고 동의를 받습니다.
+                                                    </p>
+                                                    <h4 class="clause_title">서비스 이용 과정에서 IP 주소, 쿠키, 서비스 이용 기록, 기기정보, 위치정보가 생성되어 수집될 수 있습니다. 
+                                                        또한 이미지 및 음성을 이용한 검색 서비스 등에서 이미지나 음성이 수집될 수 있습니다.
+                                                    </h4>
+                                                    <p class="clause_text">
+                                                            "구체적으로 1) 서비스 이용 과정에서 이용자에 관한 정보를 자동화된 방법으로 생성하여 이를 저장(수집)하거나, <br>                                                            
+                                                            2) 이용자 기기의 고유한 정보를 원래의 값을 확인하지 못 하도록 안전하게 변환하여 수집합니다. 서비스 이용 과정에서 위치정보가 수집될 수 있으며,<br>
+                                                            네이버에서 제공하는 위치기반 서비스에 대해서는 '네이버 위치정보 이용약관'에서 자세하게 규정하고 있습니다.
+                                                            <br>
+                                                            이와 같이 수집된 정보는 개인정보와의 연계 여부 등에 따라 개인정보에 해당할 수 있고, 개인정보에 해당하지 않을 수도 있습니다.
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </li>
+                                    <li class="terms_bx">
+                                        <span input_chk>
+                                            <input type="checkbox" id="termsService3" name="termsServive" class="chk" required>
+                                            
+                                                
+                                                "위치정보 이용약관 동의"
+                                                <span class="terms_necessary">(필수)</span>
+                                            
+
+                                        </span>
+                                        <div class="terms_box" id="divLocation">
+                                            <div class="policy_summary">
+                                                <p class="policy_summary_text">
+                                                    "위치정보 이용약관에 동의하시면,"
+                                                    <strong>위치를 활용한 광고 정보 수신</strong>
+                                                    "등을 포함하는 GURU 위치기반 서비스를 이용할 수 있습니다"
+                                                </p>
+                                                <br>
+                                            </div>
+                                            <div class="article">
+                                                <h3 class="article_title">제 1조 (목적)</h3>
+                                                <p class="article_text">
+                                                    이 약관은 "GURU"가 제공하는 위치정보사업 또는 위치기반서비스사업과 관련하여 
+                                                    회사와 개인위치정보주체와의 권리, 의무 및 책임사항, 기타 필요한 사항을 규정함을 목적으로 합니다.
+                                                </p>
+                                            </div>
+                                            <div class="article">
+                                                <h3 class="article_title">제 2 조 (약관 외 준칙)</h3>
+                                                <p class="article_text">
+                                                    이 약관에 명시되지 않은 사항은 위치정보의 보호 및 이용 등에 관한 법률, 
+                                                    정보통신망 이용촉진 및 정보보호 등에 관한 법률, 전기통신기본법, 전기통신사업법 등 관계법령과 
+                                                    회사의 이용약관 및 개인정보처리방침, 회사가 별도로 정한 지침 등에 의합니다.
+                                                </p>
+                                            </div>
+                                            
+                                        </div> 
+                                    </li>
+                                    <li></li>
+                                </ul>
+                            </div>  
+                            <div class="btn_area dobule">
+                                <span>
+                                    <a href="/register/regi_info" id="btnAgree" class="btn_type btn_primary" role="button">확인</a>
+                                </span>
+                                <span>
+                                    <div onclick="back()" id="btnCancel" class="btn_type btn_default" role="button">취소</div>
+                                </span>
+                            </div>  
+                        </form>
+                        
+                    </div>
+                </div>
+                <!-- content -->
+            </div>
+            <!-- container -->
+            <div id="footer" role="contentinfo">
+                <address>
+                    <em>
+                        <a href="#" target="_blank" class="logo">
+                            <span class="blind">GURU</span>
+                        </a>
+                    </em>
+                    <em class="copy">Copyright GURU All Rights Reserverd</em>
+                </address>
+                
+            </div>
+            <!-- footer -->
+        </div>
+      <script src="/javascripts/register.js"></script>
+    </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>GURU</title>
+  <link rel='stylesheet' href='/stylesheets/instlist.css' />
+</head>
+
+<body>
+  <nav class="header_bar">
+    <div class="header_logo">
+      <a href="/index"><img src="/images/GURU_logo.png"></a>
+    </div>
+
+    <ul class="header_menu">
+      <li><a href="/about">소개</a></li>
+      <li><a href="/gurulist">GURU</a></li>
+      <li><a href="/institutions">투자기관</a></li>
+      <li><a href="/boardlist/1">게시판</a></li>
+    </ul>
+
+    <%if (logined){%>
+      <ul class="loged">
+        <li><%=logined%></li>
+        <li><a href="/enterpw">정보수정</a></li>
+        <li><a href="/logout">로그아웃</a></li>
+      </ul>
+        
+    <%} else { %>
+      <ul class="sign">
+        <li><a href='/login'>로그인</a></li>
+        <li><a href='/register'>회원가입</a></li>
+      </ul>
+    <%}%>
+  </nav>
+      <div class="board">
+        <h1>GURU 목록</h1>
+        <table class="list-table">
+            <thead>
+                <tr>
+
+                      <th width="300">GURU</th>
+                      <th width="500">소속</th>
+                  </tr>
+              </thead>
+              
+            <tbody>
+              <tr>
+
+                <td width="300">
+                    <ul class="te">
+                      <li><a href="/warrenB">Warren Buffett</a></li>
+                      <li><a href="/george">George Soros</a></li>
+                      <li><a href="/bruce">Bruce Berkowitz</a></li>
+                      <li><a href="/boone">T. Boone Pickens</a></li>
+                      <li><a href="/wallace">Wallace Weitz</a></li>
+                      <li><a href="/pabrai">Pabrai Mohnish</a></li>
+                      <li><a href="/jim">Jim Simons</a></li>
+                      <li><a href="/arnie">Arnie Schneider</a></li>
+                      <li><a href="/bill">Chuck Akre</a></li>
+                      <li><a href="/charles">Charles Brandes</a></li>
+                      <li><a href="/bruceS">Bruce Sherman</a></li>
+                    </ul>
+
+                </td>
+                <td width="500">
+                    <ul class="te">
+                        <li><a href="https://www.berkshirehathaway.com/" target="_blank">Berkshire Hathaway Inc</a></li>
+                        <li><a href="https://www.georgesoros.com/" target="_blank">Soros Fund Management LLC</a></li>
+                        <li><a href="https://www.fairholmefunds.com/" target="_blank">Fairholme Capital Mngt</a></li>
+                        <li><a href="https://www.bpcfunds.com/" target="_blank">BP Capital</a></li>
+                        <li><a href="https://weitzinvestments.com/default.fs" target="_blank">Weitz Wallace R&CO</a></li>
+                        <li><a href="http://www.chaiwithpabrai.com/" target="_blank">Pabrai Mohnish</a></li>
+                        <li><a href="https://www.rentec.com/Home.action?index=true" target="_blank">Renaissance Technologies</a></li>
+                        <li><a href="https://sec.report/CIK/0001036250" target="_blank">Schnieder Capital Management CORP</a></li>
+                        <li><a href="https://www.akrecapital.com/" target="_blank">AKRE CAPITAL MANAGEMENT LLC</a></li>
+                        <li><a href="https://www.brandes.com/" target="_blank">Brandes Investment Partners. LP</a></li>
+                        <li><a href="https://www.pcm-inc.com/?__cf_chl_captcha_tk__=cfa5d14c23d368cd7f40ac7650a2797a51c77403-1615858533-0-AVF1_VoKo8DvSKW9LWz0n8psm_F7LC2UXazOgLe9ADnMppbbOoXN-HCMd2NYQ3gG3-fAhoUngUtw-DSI8phrzt7dg6JMEbn0GISjFFhu6XNj7jnOBYAO4QdX6SkUFqKEtsrb1-y6YPvUWn9qKpmjt86ODWwu1wlj-1cful3E1-s-jQiAosH0UniTmdjiV6-AELcXKh2_l-Lmzz6JCzcj8YYW077WDXDF9_-Za34feGNNXr9RQ6fFywnJS_laZVRpCDpBfCbyWv4CJA_902Qw_auiqth4j9fN7TsbJ-qwRMIrLLxR9R1zEdsLO7a6Gi4tCOUSsThcrnVjLQwhP4ztWXa38u_2IBw3QR5Dc6wABKAi9obgY1eFXey85dLmX8TxKeLdacX_eS4vvaPRqWlibBsuakNXZmCjWgfL6lNN-XQ0fjfd7-7Vya1JzNrtmFMgcgs6XEnaiYPWccQ9dmzxUab5mHLrHlSUagRZPV_Q6m8EThmzqP_gJaBkdmUEVsm9oAcwualI9fBkH43u2EWE402YpffokaVv6odOkudze1TyVrAW85xxGVv9JdhLHweezPYZRWH4kH1S5SRodhG0h7NqX8tutWbz7HRdrobRXwqD" target="_blank">Private Capital Management</a></li>
+
+                    </ul>
+                </td>
+                
+            </tr>
+            </tbody>
+        
+          </table>
+        </div>
+</body>
+
+</html>

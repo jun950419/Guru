@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>GURU</title>
+  <link rel='stylesheet' href='/stylesheets/institions.css' />
+</head>
+
+<body>
+  <nav class="header_bar">
+    <div class="header_logo">
+      <a href='/index'><img src="/images/GURU_logo.png"></a>
+    </div>
+
+    <ul class="header_menu">
+      <li><a href="/about">소개</a></li>
+      <li><a href="/gurulist">GURU</a></li>
+      <li><a href="/institutions">투자기관</a></li>
+      <li><a href="/boardlist/1">게시판</a></li>
+    </ul>
+
+    <%if (logined){%>
+      <ul class="loged">
+        <li><%=logined%></li>
+        <li><a href="/enterpw">정보수정</a></li>
+        <li><a href="/logout">로그아웃</a></li>
+      </ul>
+        
+    <%} else { %>
+      <ul class="sign">
+        <li><a href='/login'>로그인</a></li>
+        <li><a href='/register'>회원가입</a></li>
+      </ul>
+    <%}%>
+  </nav>
+      <div class="board">
+        <h1>Bank Of America CORP /DE/</h1>
+        <h5>미국의 상업 은행으로 미국에서 2번째로 큰 지주회사<br>
+        전 세계 38개국에 지점망을 갖춘 초대형 금융기업으로  2020년 12월기준 시가총액은 274조원이다.</h5>
+        <table class="list-table">
+            <thead>
+                <tr>
+
+                      <th width="500">회사명</th>
+                      <th width="150">상장코드</th>
+                      <th width="200">2020-12-31 총 자산</th>
+                      <th width="150">주식 수</th>
+                      <th width="160">포트폴리오%</th>
+                  </tr>
+              </thead>
+              
+            <tbody>
+              <tr>
+                <% for(let i=0; i<20; i++){for(let x=0;x<5;x++){%>
+                   
+                <td>
+                    <ul>
+                        <li class="tl"><%=arra[x][i]%></li>
+                        
+                    </ul>
+                    
+                </td>
+                
+            
+            <%}%>
+        </tr>
+        <%}%>
+            </tbody>
+        
+          </table>
+        </div>
+
+</body>
+
+</html>

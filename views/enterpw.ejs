@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>GURU</title>
+  <link rel='stylesheet' href='/stylesheets/enterpw.css' />
+</head>
+
+<body>
+  <nav class="header_bar">
+    <div class="header_logo">
+      <a href='/index'><img src="/images/GURU_logo.png"></a>
+    </div>
+
+    <ul class="header_menu">
+      <li><a href="/about">소개</a></li>
+      <li><a href="/gurulist">GURU</a></li>
+      <li><a href="/institutions">투자기관</a></li>
+      <li><a href="/boardlist/1">게시판</a></li>
+    </ul>
+
+    <%if (logined){%>
+      <ul class="loged">
+
+        <li><%=logined%></li>
+        <li><a href="/logout">로그아웃</a></li>
+      </ul>
+        
+    <%} else { %>
+      <ul class="sign">
+        <li><a href='/login'>로그인</a></li>
+        <li><a href='/register'>회원가입</a></li>
+      </ul>
+    <%}%>
+  </nav>
+  
+  <div class = "total">
+        <div class = "table">
+
+
+        </div>
+
+        <div class = "second">
+          <div class="password">
+            <h1>내 정보 확인</h1>
+              <div class="enterpw">
+                <form action="/enterpw" method="POST">
+                  <h3>본인 확인을 위해 비밀번호를 입력해주세요.</h3>
+                  <input type="password"  name="password" placeholder="비밀번호">
+                  <button class="pw_btn" type="submit">확인</button>
+                </form>
+              </div>
+          </div>
+            
+
+
+        </div>
+
+        <div class="third">
+
+
+        </div>
+
+    
+  </div>
+
+</body>
+</html>

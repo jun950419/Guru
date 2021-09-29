@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>GURU</title>
+  <link rel='stylesheet' href='/stylesheets/instlist.css' />
+</head>
+
+<body>
+  <nav class="header_bar">
+    <div class="header_logo">
+      <a href="/index"><img src="/images/GURU_logo.png"></a>
+    </div>
+
+    <ul class="header_menu">
+      <li><a href="/about">소개</a></li>
+      <li><a href="/gurulist">GURU</a></li>
+      <li><a href="/institutions">투자기관</a></li>
+      <li><a href="/boardlist/1">게시판</a></li>
+    </ul>
+
+    <%if (logined){%>
+      <ul class="loged">
+        <li><%=logined%></li>
+        <li><a href="/enterpw">정보수정</a></li>
+        <li><a href="/logout">로그아웃</a></li>
+      </ul>
+        
+    <%} else { %>
+      <ul class="sign">
+        <li><a href='/login'>로그인</a></li>
+        <li><a href='/register'>회원가입</a></li>
+      </ul>
+    <%}%>
+  </nav>
+      <div class="board">
+        <h1>투자 기관</h1>
+        <table class="list-table">
+            <thead>
+                <tr>
+
+                      <th width="500">목록</th>
+                      <th width="200">업데이트 날짜</th>
+                  </tr>
+              </thead>
+              
+            <tbody>
+              <tr>
+
+                <td width="500">
+                    <ul class="te">
+                        <li><a href="/franklin">Franklin Resources INC<a></li>
+                        <li><a href="/JPMorgan">JP Morgan CHASE & CO</a></li>
+                        <li><a href="/city">CityGroup INC</a></li>
+                        <li><a href="/boa">Bank Of America CORP /DE/</a></li>
+                        <li><a href="/morgan">Morgan Stanley</a></li>
+                        <li><a href="/gold">Goldman Sachs Group INC</a></li>
+                        <li><a href="/credit">Credit Suisse</a></li>
+                        <li><a href="/fmr">FMR LLC</a></li>
+                    </ul>
+
+                </td>
+                <td width="200">
+                    <ul class="te">
+                        <li>2021-02-10</li>
+                        <li>2021-02-11</li>
+                        <li>2021-02-11</li>
+                        <li>2021-02-10</li>
+                        <li>2021-02-16</li>
+                        <li>2021-02-12</li>
+                        <li>2021-02-10</li>
+                        <li>2021-02-08</li>
+
+                    </ul>
+                </td>
+                
+            </tr>
+            </tbody>
+        
+          </table>
+        </div>
+</body>
+
+</html>

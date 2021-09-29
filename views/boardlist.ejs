@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>GURU</title>
+  <link rel='stylesheet' href='/stylesheets/boardlist.css' />
+</head>
+
+<body>
+  <nav class="header_bar">
+    <div class="header_logo">
+      <a href='/index'><img src="/images/GURU_logo.png"></a>
+    </div>
+
+    <ul class="header_menu">
+      <li><a href="/about">소개</a></li>
+      <li><a href="/gurulist">GURU</a></li>
+      <li><a href="/institutions">투자기관</a></li>
+      <li><a href="/boardlist/1">게시판</a></li>
+    </ul>
+
+    <%if (logined){%>
+      <ul class="loged">
+        <li><%=username%></li>
+        <li><a href="/enterpw">정보수정</a></li>
+        <li><a href="/logout">로그아웃</a></li>
+      </ul>
+        
+    <%} else { %>
+      <ul class="sign">
+        <li><a href='/login'>로그인</a></li>
+        <li><a href='/register'>회원가입</a></li>
+      </ul>
+    <%}%>
+  </nav>
+
+      <div class="board">
+        <h1>자유 게시판</h1>
+        <table class="list-table">
+            <thead>
+              <tr>
+
+                <th width="120">작성자</th>
+                <th width="500">제목</th>
+                <th width="100">등록일</th>
+              </tr>
+            </thead>
+            <tbody>
+                  <tr>
+                  <% for(let i=(page * page_num) - page_num; i < (page * page_num); i++){ %>
+                    <%if(i> leng){%>
+                        <% i++;%>
+                    <%}else{%>
+                      <% var data2 = data[i]%>
+                        <tr>
+
+                            <td><%=data2.id%></td>
+                            <td class="tt2"><a href="/boardview/<%= data2.idx %>"><%= data2.title %></a></td>
+                            <% 
+                                  var date=new Date(data2.regdate);
+                                  var fdate=date.getFullYear() + '년' + (date.getMonth() + 1) + '월' + date.getDate()+'일 ' +date.getHours() + "시" + date.getMinutes() + "분 "  ;
+                                  
+                              %>
+                            <td><%= fdate %></td>
+                        </tr>
+                  <% } } %>
+            </tbody>
+          
+        </table>
+                  <div class="num_panel">
+                    <% for(var j=0; j < data.length / page_num; j++){ %>
+                      <div class="num" id="<%=j+1%>">[<a href="/boardlist/<%= j + 1 %>">
+                          <%= j + 1 %>
+                        </a>]</div>
+                      <% } %>
+                  </div>
+        <div id="write_btn">
+          <a href="/boardwrite"><button>글쓰기</button></a>
+        </div>
+        </div>
+</body>
+
+</html>

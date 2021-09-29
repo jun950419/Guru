@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>GURU</title>
+  <link rel='stylesheet' href='/stylesheets/boardlist.css' />
+  <script src="/javascripts/lib/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+  <nav class="header_bar">
+    <div class="header_logo">
+      <a href='/index'><img src="/images/GURU_logo.png"></a>
+    </div>
+
+    <ul class="header_menu">
+      <li><a href="/about">소개</a></li>
+      <li><a href="/gurulist">GURU</a></li>
+      <li><a href="/institutions">투자기관</a></li>
+      <li><a href="/boardlist/1">게시판</a></li>
+    </ul>
+
+    <%if (logined){%>
+      <ul class="loged">
+        <li>
+          <%=logined%>
+        </li>
+        <li><a href="/enterpw">정보수정</a></li>
+        <li><a href="/logout">로그아웃</a></li>
+      </ul>
+
+      <%} else { %>
+        <ul class="sign">
+          <li><a href='/login'>로그인</a></li>
+          <li><a href='/register'>회원가입</a></li>
+        </ul>
+        <%}%>
+  </nav>
+
+
+  <div class="article">
+    <div class="article_wrap">
+      <div class="article_content">
+        <div class="article_header">
+          <div class="article_title">
+            <h3>자유 게시판</h3>
+            <h1>
+              <%=data.title%>
+            </h1>
+          </div>
+          <div class="user_info">
+            <div class="profile_area">
+              <div class="profile_info">
+                <%=data.id%>
+                  <span class="time">
+                    <%=data.regdate%>
+                  </span>
+
+              </div>
+              <div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+        <!-- article_header -->
+
+        <div id="content_body">
+          <%=data.content%>
+        </div>
+        <div class="comment_box">
+          <div class="btn_updel">
+            
+            <%if(logined==data.id){%>
+              <button name="update" class="update" type="submit"><a href="/boardupdate/<%=data.idx%>"> 수정</a></button>
+              <button name="delete" class="delete" type="submit"><a href="/boardview/delete/<%=data.idx%>">삭제  </button>
+            <%}%>  
+              <button><a href="/boardlist/1"> 목록 </a> </button>
+            
+          </div>
+          <div class="comment_opt">
+            <ul class="comment_list">
+              <li>
+                <div class="comment_area">
+                  
+                </div>
+              </li>
+            </ul>
+            <h3 class="comment_title">댓글</h3>
+          </div>
+          <div class="comment_writter">
+            <div class="regi_box">
+              <form action="/boardview/insert/<%=data.idx%>" method="POST">
+                <textarea required placeholder="댓글을 남겨보세요" name="reply" rows="2"
+                  style="overflow: hidden; overflow-wrap: break-word; height: 17px;"></textarea>
+            </div> 
+            <div class="regi">
+              <button class="btn_regi" type="submit">등록</button>
+            </div>
+            <div class="comment_attatch">
+              
+              </form>
+              <div class="comment_box" >
+                <%if(comment!=''){%>
+                  <% comment.forEach((item,index)=>{%>
+                    <% 
+                        var date=new Date(item.time);
+                        var fdate=date.getFullYear() + '년' + (date.getMonth() + 1) + '월' + date.getDate()+'일 ' +date.getHours() + "시" + date.getMinutes() + "분 "  ;
+                        
+                    %>
+                    <div>
+                    <span class="writter"><%=item.id%></span>
+                    <span><%=fdate%></span>
+                  </div>
+                  <span class="item_reply"><%=item.reply%></span>
+                  <hr color="ebecef">
+                  <%})%>
+                <%}%>
+                
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+  <div>
+
+    <script>
+      $(document).ready(()=>{
+        $('p img').css('max-width','800px');
+        $('p img').css('max-height','800px');
+      })
+
+
+      const string = document.getElementById('content_body').textContent;
+      document.getElementById('content_body').innerHTML=string;
+  </script>
+</body>
+
+</html>

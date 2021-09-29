@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>회원가입</title>
+
+    <link rel="stylesheet" href="/stylesheets/regi_info.css">
+    <!-- jQuery 링크 -->
+    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="/javascripts/lib/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+    <div id="container" class="main_container">
+        <div style="padding: 20px;"></div>
+        <div class="login_container">
+            <div class="form_container">
+
+
+                <form name="login_form" action="/register/regi_info/sign" method="post">
+                    <div class="form_title_div">
+                        <p class="form_title_p">회원가입</p>
+                    </div>
+                    <div>
+                        <div>
+                            <a class="form_item_name">이름</a>
+                        </div>
+                        <div>
+                            <input type="text"  id="user_name" name="name" minlength="2" placeholder="이름" class="form_input" required autocomplete="off">
+                        </div>
+                        <div class="form_text_alert_padding">
+                            <div id="alert_username" class="form_text_alert"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div>
+                            <a class="form_item_name">아이디</a>
+                        </div>
+                        <div>
+                            <input type="text" id="user_id" name="id" minlength="2" placeholder="ID" class="form_input" required autocomplete="off">
+                        </div>
+                        <div class="form_text_alert_padding">
+                            <div id="alert_userid" class="form_text_alert"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div>
+                            <a class="form_item_name">생년월일</a>
+                        </div>
+                        <div>
+                            <input type="text"maxlength="6" minlength="6" name="birth" placeholder="ex)901212" class="form_input" required autocomplete="off">
+                        </div>
+                        <div class="form_text_alert_padding">
+                            <div id="alert_userbirth" class="form_text_alert"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <a class="form_item_name">이메일</a>
+                        </div>
+                        <div>
+                            <input type="text" id="user-email" name="email" placeholder="Example@.ex.com" class="form_input" required >
+                        </div>
+                        <div class="form_text_alert_padding">
+                            <div id="alert_email" class="form_text_alert"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <a class="form_item_name">비밀번호</a>
+                        </div>
+                        <div>
+                            <input type="password" id="user-pw" name="password" minlength="6" placeholder="비밀번호는 6자 이상입니다." class="form_input" required>
+                        </div>
+                        <div class="form_text_alert_padding">
+                            <div id="alert_password" class="form_text_alert"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <a class="form_item_name">비밀번호 확인</a>
+                        </div>
+                        <div>
+                            <input type="password" id="user-repw" name="password2" minlength="6" onfocus="" placeholder="비밀번호를 재입력해주세요" class="form_input" />
+                        </div>
+                        <div class="form_text_alert_padding">
+                            <div id="alert_password2" class="form_text_alert"></div>
+                        </div>
+                    </div>
+                    <div style="height: 10px;"></div>
+                    <div>
+                        <button type="submit" class="form_submit_button" onclick="login()" >가입하기</button>
+                    </div>
+                    
+                    <div>
+                        <button type="submit" id="btnCancel" onclick="back()">돌아가기</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/javascripts/regi_info.js"></script>
+</body>
+</html>

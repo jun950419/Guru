@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    
+    <title>Login</title>
+    <link rel="stylesheet" href='/stylesheets/login.css' />
+</head>
+<body>
+    <div class="main-container">
+        <div class="main-wrap">
+           <header>
+           </header>
+           
+           <section class="login-input-section">
+                <a href="/"><img src="/images/GURU_logo.png"></a>
+                <form action="/login" method="POST">
+                    <div class="login-email">
+                            <input type="text" name="id" class="e-mail" placeholder="아이디" required>
+                    </div>
+                    <div class="login-password">
+                            <input type="password" name="password" class="psw" placeholder="비밀번호" required>
+                    </div>
+                    <div class="btn-login">
+                        <button type="submit" class="sign" onclick="login()"><strong>로그인</strong></button>
+                    </div>
+
+                </form>
+                <div class="other-log">
+                        <div class="find-info">
+                            <a href="/register">회원가입</a>
+                        </div>
+
+                </div>
+           </section>
+            <footer>
+                <div class="copyright">
+                </div>
+            </footer>    
+        </div> 
+
+    </div>
+
+</body>
+</html>

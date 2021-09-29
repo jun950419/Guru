@@ -1,0 +1,142 @@
+body{
+    margin: 0;
+  }
+  
+  
+  .header_bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #263343;
+    padding: 8px 12px;
+  }
+  .header_bar a{
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .header_logo{
+    width: 10%;
+  }
+  .header_menu{
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    
+  }
+  .header_menu li{
+    padding: 8px 12px;
+    
+  }
+  .header_menu li:hover{
+    background-color: #d49466;
+    border-radius: 4px;
+  }
+  .sign{
+    list-style: none;
+    display: flex;
+    color: #ffffff;
+    padding-left: 0; 
+  
+  }
+  .sign li{
+    padding: 8px 12px;
+    
+  }
+  
+  .sign li:hover{
+    background-color: #d49466;
+    border-radius: 4px;
+    
+  }
+
+  
+  .loged{
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+  }
+  .loged li{
+    padding: 8px 12px;
+    list-style: none;
+    color: #ffffff;
+    padding-left: 0; 
+    display: flex;
+    
+  }
+  /* 게시판 */
+  .fl {
+      float:left;
+  }
+  .tc {
+      text-align:center;
+  }
+  
+  /* 게시판 목록 */
+  #board_area {
+      width: 900px;
+      position: relative;
+  }
+  .list-table {
+      margin-top: 40px;
+      
+  }
+  .list-table thead th{
+      height:40px;
+      border-top:2px solid #09C;
+      border-bottom:1px solid #CCC;
+      font-weight: bold;
+      font-size: 17px;
+  }
+  .list-table tbody td{
+      text-align:center;
+      padding:10px 0;
+      border-bottom:1px solid #CCC; height:20px;
+      font-size: 14px 
+  }
+  #write_btn {
+      position: absolute;
+      margin-top:200px;
+  
+  }
+  
+  .board{
+    width:900px;
+	position:relative;
+	margin:0 auto;
+    line-height: 2;
+  }
+  
+  li{
+    list-style: none;
+    text-align: left;
+    text-decoration: none;
+    margin-top: 5px;
+  }
+  .tl{
+    font-size: 14px;
+  }
+
+  .te{
+    font-size: 20px;
+    list-style: none;
+    text-decoration: none;
+  }
+  a{
+  
+    color: #000000;
+    text-decoration: none;
+  }
+  img{
+    width: 80px;
+    height: 80px;
+
+  }
+  .photo {
+    position: relative;
+    float: right;
+  }
+  .photo img{
+    width: 115px;
+    height: 130px;
+  }
+  

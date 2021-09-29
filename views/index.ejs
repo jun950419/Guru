@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>GURU</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="header_bar">
+    <div class="header_logo">
+      <a href='/index'><img src="/images/GURU_logo.png"></a>
+    </div>
+
+    <ul class="header_menu">
+      <li><a href="/about">소개</a></li>
+      <li><a href="/gurulist">GURU</a></li>
+      <li><a href="/institutions">투자기관</a></li>
+      <li><a href="/boardlist/1">게시판</a></li>
+    </ul>
+
+    <%if (logined){%>
+      <ul class="loged">
+        <li><%=username%></li>
+        <li><a href="/enterpw">내 정보</a></li>
+        <li><a href="/logout">로그아웃</a></li>
+      </ul>
+        
+    <%} else { %>
+      <ul class="sign">
+        <li><a href='/login'>로그인</a></li>
+        <li><a href='/register'>회원가입</a></li>
+      </ul>
+    <%}%>
+    
+  </nav>
+  <div class = "total">
+    <div class = "table">
+      <table>          
+        <div class="main_chart">
+          <div class="realtime"><strong>실시간 변동 현황</strong></div>  
+            <hr size="5px" width="60%" align="left" color="#006699">
+            <% for(let i=0;i<65;i++){for(let x=0;x<3;x++){%>
+              <%if(x==1){%>
+              <img src="<%=arr[x][i]%>" alt="">
+              <%}else{%>
+              <div class="charts" ><%=arr[x][i]%></div>
+              <%}%>
+    
+              <%}%>
+              <hr width="60%" align="left">
+          <%}%>
+          
+        </div>
+      </table>
+    </div>
+
+    <div class = "second">
+      <p class="new_title"><strong>해외 증시 소식</strong></p>
+      <section class="news_total">
+        <div class="news_form">
+          <ul class="news_list">
+            
+              <% arr1.forEach((item,index)=>{ %>
+                <li>
+                
+                  <a href="<%=item[0]%>"><%= item[1] %></a>
+                  <p class="main_title"><%= item[2] %> </p>  <p class="from"><%= item[3] %> </p>
+                  
+              </li>
+              <% }) %>
+
+            
+          </ul>
+        </div>
+
+      </section>
+    </div>
+  </div>
+          <script src='/javascripts/index.js'></script>
+</body>
+
+</html>

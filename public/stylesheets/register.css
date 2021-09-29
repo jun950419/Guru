@@ -1,0 +1,257 @@
+head{
+    display: none;
+}
+html{
+    font-size: 12px;
+}
+body{
+    position: relative;
+
+}
+
+#header{
+    position: relative;
+    overflow: hidden;
+    padding: 20px 0 24px;
+    box-sizing: border-box;
+}
+#container, #footer, #header{
+    margin: 0 auto;
+    max-width: 768px;
+    min-width: 460px;
+}
+h1{
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+#header img{
+    display: block;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 240px auto;
+    
+}
+#header .lang{
+    position: relative;
+    top: 15px;
+    right: 0;
+}
+#header .lang .sel{
+    display: inline-block;
+    min-width: 95px;
+    height: 30px;
+    padding: 8px 8px 7px 9px;
+    border: solid 1px #dadada;
+    font-size: 12px;
+    line-height: 15px;
+    background: 0 0;
+    color: #333;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+#header .lang a{
+    color: #333;
+    text-decoration: none;
+}
+#header .lang .sel .lang_text{
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 400;
+}
+#header .lang .lang_select_wrap{
+    position: relative;
+    top: 0;
+    right: 0;
+    min-width: 95px;
+    padding: 8px 8px 7px 9px;
+    border: solid 1px #dadada;
+    color: #333;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+#header .lang .lang_select_wrap .lang_select{
+    display: block;
+}
+#header .lang .lang_select_wrap .lang_text{
+    line-height: 20px;
+}
+
+.sel{
+    width: 100%;
+    height: 29px;
+}
+li{
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+#content{
+    width: 460px;
+    margin: 0 auto;
+}
+.blind{
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+}
+button, select, textarea{
+    border-radius: 0;
+    border: none;
+    background:0 0;
+    appearance: none;
+    outline: 0;
+    text-decoration: none;
+    cursor: pointer;
+}
+p{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.input_chk{
+    position: relative;
+    display: block;
+
+}
+
+
+
+
+.input_chk input{
+    position: absolute;
+    top: 50%;
+    left: 1px;
+    width: 18px;
+    height: 18px;
+    margin-top: -10px;
+    outline: 0;
+}
+.terms_chk_all .input_chk label{
+    padding-left: 34px;
+    line-height: 21px;
+}
+.input_chk label{
+    position: relative;
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    
+    color:#333;
+    box-sizing: border-box;
+}
+.chk_all_txt{
+    text-decoration: underline;
+    
+}
+.m_br{
+    display: none;
+}
+.terms_bx{
+    display: block;
+    padding-top: 30px;
+}
+.terms_bx_list{
+    margin-top: 4px;
+}
+ol,ul{
+    list-style: none;
+}
+.terms_box{
+    position: relative;
+    overflow: auto;
+    height: 88px;
+    padding: 12px;
+    border: 1px solid #dadada;
+    background: #fff;
+    box-sizing: border-box;
+}
+.article, .policy_summary{
+    font-size: 12px;
+    line-height: 16px;
+    color: #666;
+}
+.article .article_title, .clause .clause_title{
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+} 
+.article .article_title{
+    padding-bottom: 8px;
+}
+.clause .clause_title{
+    margin-top: 10px;
+}
+.btn_area.double{
+    overflow: hidden;
+    margin: 29px -5px 0;
+    display: block;
+}
+.btn_area.double>span{
+    display: block;
+    float: left;
+    width: 50%;
+}
+.btn_area>span .btn_type{
+    width: auto;
+    margin: 0 5px;
+}
+.btn_default{
+    color: #fff;
+    background-color: #8e8e8e8e;
+}
+#btnAgree{
+    width: 420px;
+    left: 40px;
+    position: relative;
+}
+#btnCancel{
+    width: 420px;
+    left: 40px;
+    position: relative;
+
+}
+.btn_type{
+    display: block;
+    width: 100%;
+    padding: 15px 0 15px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.btn_primary{
+    color: #fff;
+    border: solid 1px rgba(0, 0, 0, .08);
+    background-color: #263343;
+}
+#footer{
+    clear: both;
+    margin: 0 auto;
+    padding: 30px 0 15px 0;
+    text-align: center;
+}
+#footer address{
+    font: 9px/14px Verdana;
+}
+#footer address em{
+    font: 9px verdana;
+    padding-left: 4px;
+}
+#footer address span{
+    font: 9px/14px Verdana;
+    padding-left: 2px;
+}

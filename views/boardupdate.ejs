@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>GURU</title>
+  <link rel='stylesheet' href='/stylesheets/boardwirte.css' />
+  <!-- include libraries(jQuery, bootstrap) -->
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script> 
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script> 
+
+<!-- include summernote css/js-->
+<link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.css" rel="stylesheet">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.js"></script>
+</head>
+
+<body>
+  <nav class="header_bar">
+    <div class="header_logo">
+      <a href='/index'><img src="/images/GURU_logo.png"></a>
+    </div>
+
+    <ul class="header_menu">
+      <li><a href="/about">소개</a></li>
+      <li><a href="/gurulist">GURU</a></li>
+      <li><a href="/institutions">투자기관</a></li>
+      <li><a href="/boardlist/1">게시판</a></li>
+    </ul>
+
+    <%if (logined){%>
+      <ul class="loged">
+        <li><%=data.id%></li>
+        <li><a href="/enterpw">정보수정</a></li>
+        <li><a href="/logout">로그아웃</a></li>
+      </ul>
+        
+    <%} else { %>
+      <ul class="sign">
+        <li><a href='/login'>로그인</a></li>
+        <li><a href='/register'>회원가입</a></li>
+      </ul>
+    <%}%>
+  </nav>
+
+  <div id="board_write">
+        <div id="write_area">
+            <form action="/boardupdate/<%=data.idx%>" method="post">
+                <div id="in_title">
+                    <textarea name="title" id="utitle" rows="2" cols="55" placeholder="제목" maxlength="40" required value="<%=data.title%>" ><%=data.title%> </textarea>
+                </div>
+                <div class="wi_line"></div>
+                
+                <div id="in_content">
+                    <textarea name="content" id="ucontent" placeholder="내용"  required><%=data.content%></textarea>
+                </div>
+
+                <div class="bt_se">
+                    <button type="submit">작성하기</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+       $(document).ready(function() {
+            $('#ucontent').summernote({
+                 height: 300,                 // 에디터 높이
+                  minHeight: null,             // 최소 높이
+                  maxHeight: null,             // 최대 높이
+                focus: true,                  // 에디터 로딩후 포커스를 맞출지 여부
+                lang: "ko-KR",                    // 한글 설정
+                placeholder: '최대 2048자까지 쓸 수 있습니다',    //placeholder 설정
+            });
+          });
+    </script>
+</body>
+
+</html>
